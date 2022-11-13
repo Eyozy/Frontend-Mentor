@@ -1,0 +1,159 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Outfit', sans-serif;
+  font-size: 18px;
+  background-color: hsl(217, 54%, 11%);
+  color: hsl(215, 51%, 70%);
+  max-width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  background-color: hsl(216, 50%, 16%);
+  margin: 0 25px;
+  padding: 25px;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.img {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.img:hover>figure {
+  background-color: rgb(0, 255, 247, .45);
+  opacity: 1;
+  visibility: visible;
+  cursor: pointer;
+}
+
+.img__cover {
+  max-width: 100%;
+  min-height: 100%;
+  border-radius: 10px;
+}
+
+figure {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  visibility: hidden;
+  transition: all .6s ease-in-out;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+h1 {
+  color: #fff;
+  font-size: 24px;
+  font-weight: 600;
+  transition: all .4s ease-in-out;
+}
+
+p {
+  font-weight: 400;
+}
+
+.content__details {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  font-size: 16px;
+  padding-bottom: 20px;
+  border-bottom: 2px solid hsl(215, 32%, 27%);
+}
+
+.content__details>p {
+  display: flex;
+  gap: 8px;
+  width: 50%;
+}
+
+.content__details p:first-child {
+  color: hsl(178, 100%, 50%);
+  font-weight: 400;
+}
+
+.content__details p:last-child {
+  justify-content: flex-end;
+}
+
+.content__author {
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.content__author img {
+  width: 30px;
+  border-radius: 50%;
+  border: 1px solid #fff;
+}
+
+.content__author p span {
+  color: #fff;
+  transition: all .4s ease-in-out;
+}
+
+h1:hover,
+.content__author p span:hover {
+  color: hsl(178, 100%, 50%);
+}
+
+@media screen and (max-width:300px) {
+  .container {
+    margin: 0 15px;
+    padding: 20px;
+    gap: 20px;
+  }
+
+  .content {
+    gap: 10px;
+  }
+
+  h1 {
+    font-size: 18px;
+  }
+
+  .coontent>p,
+  .content__details,
+  .content__author {
+    font-size: 14px;
+  }
+}
+
+@media screen and (min-width:376px) and (max-width:600px) {
+  .container {
+    width: 400px;
+  }
+}
+
+@media screen and (min-width:601px) {
+  .container {
+    width: 400px;
+  }
+}
