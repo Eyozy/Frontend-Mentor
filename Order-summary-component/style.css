@@ -1,0 +1,138 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Red Hat Display', sans-serif;
+  font-size: 16px;
+  background-color: hsl(225, 100%, 94%);
+  color: hsl(223, 47%, 23%);
+  max-width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  background-color: #fff;
+  margin: 0 25px;
+  border-radius: 18px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.img__cover {
+  max-width: 100%;
+  min-height: 100%;
+}
+
+.content {
+  padding: 0 20px 20px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+h1 {
+  font-size: 20px;
+  font-weight: 900;
+}
+
+p {
+  color: hsl(224, 23%, 55%);
+  font-weight: 500;
+  line-height: 1.6;
+}
+
+.paragraph {
+  width: 95%;
+  text-align: center;
+}
+
+.membership {
+  width: 100%;
+  background-color: rgb(224, 232, 255, .3);
+  padding: 10px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+}
+
+.membership__detail {
+  display: flex;
+  gap: 18px;
+  margin-right: auto;
+}
+
+.membership__plan p:first-child {
+  color: hsl(223, 47%, 23%);
+  font-weight: 900;
+}
+
+a {
+  font-weight: 700;
+  color: hsl(245, 75%, 52%);
+}
+
+button {
+  width: 100%;
+  border: none;
+  padding: 18px;
+  border-radius: 12px;
+  font-size: inherit;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.payment {
+  background-color: hsl(245, 75%, 52%);
+  color: #fff;
+  box-shadow: 0 15px 20px rgb(56, 41, 224, .25);
+  transition: all .4s;
+}
+
+.payment:hover {
+  background-color: rgb(56, 41, 224, .6);
+}
+
+.order {
+  background-color: transparent;
+  color: hsl(224, 23%, 55%);
+  transition: all .4s;
+}
+
+.order:hover {
+  color: hsl(223, 47%, 23%);
+}
+
+@media screen and (max-width:350px) {
+  .content {
+    padding: 0 10px 10px 10px;
+  }
+
+  .paragraph {
+    width: 100%;
+  }
+
+  .membership__detail>img {
+    display: none;
+  }
+}
+
+@media screen and (min-width:401px) and (max-width:600px) {
+  .container {
+    max-width: 360px;
+  }
+}
+
+@media screen and (min-width:601px) {
+  .container {
+    max-width: 400px;
+  }
+}
