@@ -1,0 +1,139 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 15px;
+  background-color: hsl(233, 47%, 7%);
+  color: #fff;
+  max-width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  background-color: hsl(244, 38%, 16%);
+  margin: 60px 25px;
+  border-radius: 10px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+picture {
+  position: relative;
+  max-width: 100%;
+  max-height: 100%;
+}
+
+picture::after {
+  content: "";
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: hsl(277, 64%, 61%, .65);
+}
+
+img {
+  max-width: 100%;
+  height: 100%;
+}
+
+.content {
+  padding: 0 30px 30px 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  text-align: center;
+  color: hsla(0, 0%, 100%, 0.75);
+  font-family: 'Inter', sans-serif;
+}
+
+h1 {
+  font-size: 26px;
+  font-weight: 700;
+  color: #fff;
+}
+
+h1 span {
+  color: hsl(277, 64%, 61%);
+}
+
+.paragraph {
+  line-height: 1.8;
+}
+
+.content__details {
+  margin-top: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.content__detail--number {
+  font-size: 24px;
+  color: #fff;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.content__detail--title {
+  text-transform: uppercase;
+  font-size: 10px;
+  font-weight: 400;
+  letter-spacing: 2px;
+  font-family: 'Lexend Deca', sans-serif;
+}
+
+@media screen and (max-width:600px) {
+  .container {
+    max-width: 400px;
+  }
+}
+
+@media screen and (min-width:601px) and (max-width:1080px) {
+  .container {
+    max-width: 500px;
+  }
+
+  .content__details {
+    display: flex;
+    flex-direction: row;
+  }
+}
+
+@media screen and (min-width:1081px) {
+  .container {
+    max-width: 900px;
+    margin: 0;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 60px;
+  }
+
+  .content {
+    grid-row: 1;
+    grid-column: 1 / 2;
+    padding: 0 0 0 60px;
+    display: flex;
+    flex-direction: column;
+    text-align: initial;
+    align-items: flex-start;
+  }
+
+  .content__details {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 95%;
+  }
+}
